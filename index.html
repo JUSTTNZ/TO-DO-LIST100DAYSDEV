@@ -3,28 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>Todo App</title>
   </head>
   <body>
     <header>
       <h1>Todo App</h1>
     </header>
-
+   
     <section>
-      <input type="text" placeholder="Add your new todo" />
-      <img src="" alt="" />
+      <input id="taskInput" type="text" placeholder="Add your new todo" />
+      <i id="addTask" class="fas fa-plus" style="color: green; cursor: pointer;"></i>
     </section>
+   
+
 
     <section>
-      <input type="text" placeholder="Buy a new gaming laptop" />
+      <!-- <input type="text" placeholder="Buy a new gaming laptop" />
+      <i class="fas fa-trash" style="color: black;"></i>
       <input type="text" placeholder="Complete a previous task" />
-      <img src="" alt="" />
+    
       <input type="text" placeholder="Create video for youtube" />
-      <input type="text" placeholder="Create a new portfolio site" />
+      <input type="text" placeholder="Create a new portfolio site" /> -->
+
+      <div id="taskList" style="margin-top: 20px;"></div>
     </section>
 
-    <p>You have 4 pending tasks</p>
+    <p id="taskCount">You have 0 pending tasks</p>
 
     <button>Clear All</button>
+    <script src="app.js"></script>
   </body>
 </html>

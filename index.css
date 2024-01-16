@@ -8,7 +8,7 @@
 body {
     background-image: linear-gradient(rgb(138, 196, 219) rgb(50, 153, 236));
     background-color: rgb(138, 196, 219);
-    margin: 150px;
+    margin: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,10 +17,11 @@ body {
 
 .mainContainer {
     background-color: rgb(241, 236, 236);
-    height: 300px;
+    height: 400px;
     width: 35%;
     padding: 20px;
     border-radius: 5px;
+    overflow: hidden; /* Add this property to hide overflow content */
 }
 
 .mainContainer header {
@@ -30,6 +31,7 @@ body {
 
 .mainContainer .add {
     display: flex;
+    margin-bottom: 10px;
 }
 
 .mainContainer .add #taskInput {
@@ -46,7 +48,16 @@ body {
 
 .mainContainer .list{
 display: flex;
+
+
 }
+.list {
+    overflow-y: auto; /* Add this property to enable vertical scrolling if needed */
+    max-height: 200px; /* Set a maximum height to limit the size of the task list */
+    flex-grow: 1; /* Allow the list to grow and take up available space */
+    width: 100%;
+}
+
 
 /* .mainContainer .list #taskList {
     background-color: rgba(182, 166, 166, 0.884);
@@ -75,3 +86,17 @@ display: flex;
     width: 18%;
     height: 25px;
 }
+.clear{
+margin-top: auto;
+}
+
+
+.list .deleteButton {
+    display: none;
+   
+}
+
+.list .taskItemContainer:hover .deleteButton {
+    display: inline-block;
+}
+

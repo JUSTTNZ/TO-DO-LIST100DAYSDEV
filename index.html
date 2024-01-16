@@ -4,35 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="index.css">
     <title>Todo App</title>
   </head>
+
   <body>
-    <header>
-      <h1>Todo App</h1>
-    </header>
-   
-    <section>
-      <input id="taskInput" type="text" placeholder="Add your new todo" />
-      <i id="addTask" class="fas fa-plus" style="color: green; cursor: pointer;"></i>
-    </section>
-   
+    <div class="mainContainer">
+      <header>
+        <h1>Todo App</h1>
+      </header>
+      
+      <section class="add">
+        <input id="taskInput" type="text" placeholder="Add your new todo" />
+        <i id="addTask" class="fas fa-plus" style="background-color: rgb(88, 39, 179); color: rgb(248, 241, 241); text-align: center; padding-top:5px; cursor: pointer;"></i>
+      </section>
+      
+      
+      
+      <section class="list">
+        <!-- <input type="text" placeholder="Buy a new gaming laptop" />
+            <i class="fas fa-trash" style="color: black;"></i>
+            <input type="text" placeholder="Complete a previous task" />
+          
+            <input type="text" placeholder="Create video for youtube" />
+            <input type="text" placeholder="Create a new portfolio site" /> -->
+      
+        <div id="taskList" style="margin-top: 20px; "></div>
+      </section>
+      
+      <section class="clear">
+        <p id="taskCount">You have 0 pending tasks</p>
+        
+        <button>Clear All</button>
+      </section>
 
-
-    <section>
-      <!-- <input type="text" placeholder="Buy a new gaming laptop" />
-      <i class="fas fa-trash" style="color: black;"></i>
-      <input type="text" placeholder="Complete a previous task" />
+      <script src="app.js"></script>
+    </div>
     
-      <input type="text" placeholder="Create video for youtube" />
-      <input type="text" placeholder="Create a new portfolio site" /> -->
-
-      <div id="taskList" style="margin-top: 20px;"></div>
-    </section>
-
-    <p id="taskCount">You have 0 pending tasks</p>
-
-    <button>Clear All</button>
-    <script src="app.js"></script>
   </body>
 </html>

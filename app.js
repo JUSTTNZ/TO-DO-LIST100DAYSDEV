@@ -37,8 +37,8 @@
     tasks.forEach((task, index) => {
       const taskSection = document.createElement('section');
       taskSection.innerHTML = `
-        <input type="text" value="${task}" readonly />
-        <i class="fas fa-trash" style="color: red; cursor: pointer ;" onclick="removeTask(${index})"></i>
+        <input type="text" value="${task}" readonly style="background-color: rgba(182, 166, 166, 0.884); color: rgb(12, 12, 12); width: 90%;  height: 30px;  font-size: 17px; padding: 5px; margin-bottom: 10px; border-style: none;" />
+        <i class="fas fa-trash" style="color: rgb(248, 241, 241); background-color:  rgb(228, 30, 30); width: 10%; height: 30px; text-align: center; padding-top: 5px;cursor: pointer ;" onclick="removeTask(${index})"></i>
       `;
       taskListContainer.appendChild(taskSection);
     });

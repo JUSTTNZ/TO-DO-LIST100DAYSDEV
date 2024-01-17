@@ -56,28 +56,30 @@ const saveTasksToLocalStorage = () => {
 
         // Create input for task text
         const taskTextInput = document.createElement('input');
+        taskInput.style.translateY = 'auto'
         taskTextInput.type = 'text';
         taskTextInput.value = task;
         taskTextInput.readOnly = true;
-        taskTextInput.style = 'background-color: rgba(182, 166, 166, 0.884); color: rgb(12, 12, 12); width: 90%; height: 30px; font-size: 17px; padding: 5px; margin-bottom: 10px; border-style: none; ';
+        taskTextInput.style = 'background-color: rgba(182, 166, 166, 0.884); color: rgb(12, 12, 12); max-width: 90%; width: 550px; height: 30px; font-size: 17px; padding: 5px; margin-bottom: 10px; border-style: none; display: inline; ';
 
         // Create delete button
         const deleteButton = document.createElement('i');
         deleteButton.className = 'fas fa-trash deleteButton';
-        deleteButton.style = 'color: rgb(248, 241, 241); background-color: rgb(228, 30, 30); width: 10%; height: 30px; text-align: center; padding:2px; padding-right:5px; padding-top: 5px; cursor: pointer;';
+        deleteButton.style = 'color: rgb(248, 241, 241); background-color: rgb(228, 30, 30); width: 10%; height: 30px; max-height:100%; text-align: center;  padding-right:5px; padding-top: 8px;padding-bottom: 8px; cursor: pointer; margin-bottom: 10px;'
         deleteButton.onclick = () => removeTask(index);
 
             // Add event listener for double-click to enable task editing
             taskTextInput.addEventListener('dblclick', () => {
               taskTextInput.readOnly = false;
               taskTextInput.focus();
+              taskTextInput.style.hover = preventDefault;
           });
   
           // Add event listener for keydown to save the edited task on Enter
           taskTextInput.addEventListener('keydown', (event) => {
               if (event.key === 'Enter') {
                   event.preventDefault(); // Prevent the default behavior (e.g., new line)
-                  taskTextInput.readOnly = true;
+                  taskTextInput.contentEditable = true;
                   tasks[i] = taskTextInput.value; // Save the edited task
                   displayTasks(); // Update the display
                    // Save tasks to localStorage
